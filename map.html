@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Katana | Maps</title>
+	<link rel="shortcut icon" href="assets/images/ic_launcher_round.png" type="image/x-icon" />
+
+	<link rel="stylesheet" href="dashboard/css/name.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$(".hamburger .fas").click(function(){
+		    	$(".wrapper").addClass("active")
+			})
+
+			$(".wrapper .sidebar .close").click(function(){
+		    	$(".wrapper").removeClass("active")
+			})
+    	})
+    </script>
+		<meta charset="utf-8">
+		<meta name="author" content="michabre">
+
+		<!-- LeafletJS Styles -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+
+		<!-- LeafletJS API -->
+		<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+		<link rel="stylesheet" href="assets/css/map.css">
+
+
+
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="sidebar">
+      <div class="bg_shadow"></div>
+        <div class="sidebar__inner">
+           <div class="close">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="profile_info">
+            <div class="profile_img">
+              <a href="0#" class="name">Katana</a>
+            </div>
+            <div class="profile_data">
+                
+            </div>
+        </div>
+        <ul class="siderbar_menu">
+            <li><a href="dashboard.html" >
+              <div class="icon"><i class="fas fa-laptop"></i></div>
+              <div class="title">Dashboard</div>
+              </a></li>
+          <li><a href="#" class="active">
+              <div class="icon"><i class="fas fa-map"></i></div>
+              <div class="title">Maps</div>
+              </a></li>
+							<li><a href="Volunteer/volunteer.html">
+									<div class="icon"><i class="fas fa-user"></i></div>
+									<div class="title">Volunteer</div>
+									</a></li>
+					<li><a href="donation.html">
+              <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+              <div class="title">Donations</div>
+              </a></li>
+							<li><a href="hospital/ex2.html">
+									<div class="icon"><i class="fas fa-heart"></i></div>
+									<div class="title">Medical</div>
+									</a></li>
+          <li><a href="https://saralharyana.gov.in/">
+              <div class="icon"><i class="fas fa-truck"></i></div>
+              <div class="title">Transport pass</div>
+              </a></li>
+           
+
+        </ul>
+      </div>
+    </div>
+    <div class="main_container">
+      <div class="top_navbar">
+          <div class="hamburger">
+              <div class="hamburger__inner">
+                  <i class="fas fa-bars"></i>
+              </div>
+          </div>
+         <ul class="menu">
+            <li><a href="map.html" style="font-size:25px; color:blue;">Haryana Hospitals</a></li>
+         </ul>
+        <ul class="right_bar">
+					 
+            <li><a href="covid-19/covid-19.html"><i class="fas fa-city"></i></a></li>
+         
+
+         </ul>
+      </div>
+
+
+
+    </div>
+</div>
+
+    <div id="map"></div>
+    <script src="assets/js/multiple-markers.js"></script>
+
+
+
+</body>
+</html>

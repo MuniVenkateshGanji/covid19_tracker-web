@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Covid-19 India Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../assets/images/ic_launcher_round.png" type="image/x-icon" />
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="icon.png" >
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/switch-button.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark pr-5">
+      <a class="navbar-brand" href="../dashboard.html">KATANA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="../dashboard.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="../map.html">
+          Maps
+        </a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" target="_blank" href="https://covidssharyana.in/user/register">
+      Volunteer
+      </a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link"  href="../donation.html">
+    Donations
+    </a>
+  </li>
+
+        <li class="nav-item">
+          <a href="../hospital/ex2.html" class="nav-link">Medical</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" href="https://saralharyana.gov.in/" class="nav-link">Transport pass</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+<!--sliderpart-->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="wrapper flex-grow-1">
+    <div class="container center">
+
+      <div class="row update-time-row">
+        <div class="col-md-12 col-sm-12">
+          <span id="last-update-time" class="last-updated-time"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <label for="stateFilter" class="col-form-label-sm">States Filter:</label>
+          <select id="stateFilter" class="custom-select-sm">
+            <option value="ALL">All</option>
+          </select>
+        </div>
+        <div class="col-md-6 col-sm-12 refresh-switch" >
+          <label for="refresh-checkbox" class="col-form-label-sm">Auto-Refresh:&nbsp;</label>
+          <label class="switch">
+            <input id="refresh-checkbox" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="card-columns text-center">
+        <div class="card mt-4 mb-4">
+          <div class="card-header bg-dark text-white"><strong>Positive</strong></div>
+          <div class="card-body ">
+            <p id="positive" class="data"></p>
+            <p id="p-positive-delta" class="down-delta">
+              <span id="positive-delta-arrow"></span>
+              <span id="positive-delta"></span>
+            </p>
+          </div>
+        </div>
+        <div class="card mt-4 mb-4 ">
+          <div class="card-header bg-success text-white"><strong>Cured</strong></div>
+          <div class="card-body ">
+            <p id="cured" class="data"></p>
+            <p id="p-cured-delta" class="down-delta">
+              <span id="cured-delta-arrow"></span>
+              <span id="cured-delta"></span>
+            </p>
+          </div>
+        </div>
+        <div class="card mt-4 mb-4">
+          <div class="card-header bg-danger text-white"><strong>Deaths</strong></div>
+          <div class="card-body ">
+            <p id="death" class="data"></p>
+            <p id="p-death-delta" class="down-delta">
+              <span id="death-delta-arrow"></span>
+              <span id="death-delta"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-columns-center text-center">
+        <div class="card mt-4 mb-4">
+          <div class="card-header bg-primary text-white"><strong>Active</strong></div>
+          <div class="card-body ">
+            <p id="active" class="data"></p>
+            <p id="p-active-delta" class="down-delta">
+              <span id="active-delta-arrow" ></span>
+              <span id="active-delta" ></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  <script src="js/vendor/jquery.cookie-1.4.1.js"></script>
+  <script src="js/vendor/moment.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

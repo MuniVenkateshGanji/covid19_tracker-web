@@ -1,0 +1,341 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function validate(signup)
+{
+if(signup.fname.value==''|| signup.fname.value.length<6)
+{
+alert("fill the First name");
+signup.fname.focus();
+return false;
+}
+var checkOk="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var checkStr=signup.fname.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+{
+alert("please enter only letter characters in the first name");
+signup.fname.focus();
+return(false);
+}
+
+
+
+if(signup.sname.value==''|| signup.sname.value.length<3)
+{
+alert("fill the Surname");
+signup.sname.focus();
+return false;
+}
+var checkOk="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var checkStr=signup.sname.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+{
+alert("please enter only letter characters in the surname");
+signup.sname.focus();
+return(false);
+}
+
+
+
+if(signup.phone.value==''|| signup.phone.value.length!=10)
+{
+alert("fill the phoneno");
+signup.phone.focus();
+return false;
+}
+var checkOk="1234567890";
+var checkStr=signup.phone.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+
+{
+alert("please enter only digits");
+signup.phone.focus();
+return(false);
+}
+
+
+
+if(signup.mail.value=='')
+{
+alert("fill the email");
+signup.mail.focus();
+return false;
+}
+else
+{
+var x=signup.mail.value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if(atpos<1||dotpos<(atpos+2)||(dotpos+2)>=x.length)
+{
+alert("not a valid email id");
+signup.mail.focus();
+return false;
+}
+}
+
+
+
+if(signup.age.value=='' || signup.age.value.length > 3)
+{
+ alert("please give age correctly");
+ signup.age.focus();
+ return false;
+}
+
+
+
+if (signup.gender.value=='' || signup.gender.value.lenth > 6)
+{
+alert ( "Please give your gender" );
+signup.gender.focus();
+return false;
+}
+
+
+
+if(signup.problem.value=='')
+{
+alert("fill the Problem");
+signup.problem.focus();
+return false;
+}
+var checkOk="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var checkStr=signup.problem.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+{
+alert("please enter only letter characters in the problem");
+signup.problem.focus();
+return(false);
+}
+
+
+
+if(signup.hospital.value==''|| signup.hospital.value.length<4)
+{
+alert("fill the Hospital");
+signup.hospital.focus();
+return false;
+}
+var checkOk="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var checkStr=signup.hospital.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+{
+alert("please enter only letter characters in the hospital");
+signup.hospital.focus();
+return(false);
+}
+
+
+
+if(signup.address.value==''|| signup.address.value.length<6)
+{
+alert("fill the Address");
+signup.address.focus();
+return false;
+}
+var checkOk="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@()#$:/,. ";
+var checkStr=signup.address.value;
+var allValid=true;
+for(i=0;i<checkStr.length;i++)
+{
+ch=checkStr.charAt(i);
+for(j=0;j<checkOk.length;j++)
+{
+if(ch==checkOk.charAt(j))
+break;
+}
+if(j==checkOk.length)
+{
+allValid=false;
+break;
+}}
+if(!allValid)
+{
+alert("please enter only letter or characters in the address");
+signup.address.focus();
+return(false);
+}
+}
+
+</script>
+
+<style>
+
+body{
+  background: url("cover2.jpg");
+  background-repeat: no-repeat;
+
+
+}
+
+input{
+  text-align: center;
+  width: 20%;
+  height: 7%;
+  border-radius: 15px;
+  margin: 5px;
+
+}
+form{
+  text-align: right;
+  margin-right: 10%;
+}
+.address{
+  height: 15%;
+}
+  .btn{
+    border: 1px solid #000000;
+    background: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .btn1,.btn2,.btn3{
+    color: #000000;
+  }
+  .btn1:hover{
+    color: #fff;
+  }
+  .btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #000000;
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .btn1::before{
+    top: 0;
+    border-radius: 25px;
+  }
+  .btn1:hover::before{
+    height: 180%;//me//
+  }
+  
+@media screen and (max-width:1000px){
+    
+input{
+  text-align: center;
+  width: 70vw;
+  height: 10vh;
+  margin:20px;
+  border-radius: 15px;
+  margin: 5px;
+  font-size:50px;
+
+}
+form{
+    margin-top:40vh;
+  text-align: right;
+  
+}
+.address{
+  height: 15%;
+}
+}  
+  
+  
+  
+</style>
+
+</head>
+<body>
+<div class="form">
+      <form name="signup" action="detailsp.php" method="post" onSubmit="return validate(this)">
+        <input type="text"  name="fname" value="" placeholder="Full Name *" style="border-color:#66ccff"><br>
+        <input type="text"  name="sname" value="" placeholder="SurName *" style="border-color: #4dff4d"><br>
+        <input type="text"  name="phone" value="" placeholder="Phone No." style="border-color:#ff1a1a"><br>
+        <input type="text"  name="mail" value="" placeholder="E-mail *" style="border-color:#ff1ab3"><br>
+        <input type="number"  name="age" value="" placeholder="Age *" style="border-color:#000000"><br>
+        <input type="text"  name="gender" value="" placeholder="gender *" style="border-color: #4dff4d"><br>
+        <input type="text"  name="problem" value="" placeholder="Problem *" style="border-color:#ffff00"><br>
+        <input type="text"  name="hospital" value="" placeholder="Hospital *" style="border-color:#a300cc"><br>
+        <input type="text"  name="doctor" value="" placeholder="DOCTOR" style="border-color:#3333cc"><br>
+        <input type="text"  name="address" value="" placeholder="Address *" class="address" style="border-color:#996633" ><br>
+        <input type="submit" name="submit" value="submit">
+      </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Registration:</title>
+
+  </head>
+  <body>
+<img src="images/volunteer2.jpg" class="img-fluid"  height="30%" alt="">
+<div class="alert alert-primary text-center" role="alert">
+ <h2> Register For Volunteer</h2>
+</div>
+<div class="jumbotron jumbotron-fluid">
+<div class="container">
+<form action="volunreg.php" method="post">
+<h3><u>Personal Details:</u></h3>
+  <div class="row mb-3">
+    <div class="col">
+<label>FirstName<span style="color:red;">*</span>:</label>
+      <input type="name" name="fname" class="form-control" placeholder="First name" required>
+    </div>
+    <div class="col">
+<label>LastName<span style="color:red;">*</span>:</label>
+      <input type="name" name="lname" class="form-control" placeholder="Last name"required>
+    </div>
+  </div>
+ <div class="row mb-3">
+    <div class="col">
+<label>AdhaarNumber<span style="color:red;">*</span>:</label>
+      <input type="number" name="adhaar" class="form-control" placeholder="AdhaarNumber"required>
+    </div>
+    <div class="col">
+<label>Occupation<span style="color:red;">*</span>:</label>
+      <input type="text" name="occupation" class="form-control" placeholder="Occupation"required>
+    </div>
+  </div>
+<div class="row mb-3">
+    <div class="col">
+<label>Father'sName<span style="color:red;">*</span>:</label>
+      <input type="name" name="faname" class="form-control" placeholder="Father's Name"required>
+    </div>
+    <div class="col">
+<label>MobileNumber<span style="color:red;">*</span>:</label>
+      <input type="number" name="phone" class="form-control" placeholder="MobileNumber"required>
+    </div>
+  </div>
+<div class="row mb-3">
+    <div class="col">
+<label>E-mail<span style="color:red;">*</span>:</label>
+      <input type="email" name="mail" class="form-control" placeholder="E-mail"required>
+    </div>
+    <div class="col">
+<label>Date of Birth<span style="color:red;">*</span>:</label>
+      <input type="date" name="dob" class="form-control" placeholder="" required>
+    </div>
+  </div>
+<label>Gender<span style="color:red;">*</span>:</label>
+<br>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="male"  checked="">
+  <label class="custom-control-label" for="customRadioInline1">Male</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="female"  checked="">
+  <label class="custom-control-label" for="customRadioInline2">Female</label>
+</div>
+<hr style="border:solid;">
+
+<!-- address-->
+
+<h3><u>Address:</u></h3>
+<br>
+<div class="row mb-3">
+    <div class="col">
+<label>City<span style="color:red;">*</span>:</label>
+      <input type="text" name="city" class="form-control" placeholder="City"required>
+    </div>
+    <div class="col">
+<label>PinCode<span style="color:red;">*</span>:</label>
+      <input type="number" name="pin" class="form-control" placeholder="pincode"required>
+    </div>
+  </div>
+<div class="row mb-3">
+    <div class="col">
+<label>State<span style="color:red;">*</span>:</label>
+      <input type="text" name="state" class="form-control" Value="chandigarh"required>
+    </div>
+    <div class="col">
+<label>Village/Town<span style="color:red;">*</span>:</label>
+      <input type="text" name="town" class="form-control" placeholder="village"required>
+    </div>
+  </div>
+<div class="row mb-3">
+    <div class="col">
+<label>Address<span style="color:red;">*</span>:</label>
+      <input type="text" name="address" class="form-control" placeholder="Address" required>
+    </div>
+    <div class="col">
+<label>Landmark:</label>
+      <input type="text" name="landmark" class="form-control" placeholder="Landmark">
+    </div>
+  </div>
+
+<hr style="border:solid;">
+<h3><u>Area Of Help:</u></h3>
+<br>
+<label>Area of Contribution<span style="color:red;">*</span>:</label>
+<select id="volunteer" name="volunteer" class="form-control w-50" required="">
+<option value="" selected="">Select Option</option>
+
+<option value="Doctors">Doctors</option>
+
+<option value="Nurse">Nurse</option>
+
+<option value="Paramedics">Paramedics</option>
+
+<option value="Home Delivery">Home Delivery</option>
+
+<option value="Social Distancing Communication">Social Distancing Communication</option>
+
+<option value="Public Communication">Public Communication</option>
+
+<option value="District Management">District Management</option>
+
+<option value="Tele Consultation- Mental Health">Tele Consultation- Mental Health</option>
+
+<option value="Any Other">Any Other</option>
+
+</select>
+<br>
+<label>Upload Your Image<span style="color:red;">*</span>:</label>
+<br>
+<div class="custom-file mb-3 w-50">
+  <input type="file" name="img" class="custom-file-input" id="customFile" accept="image/png, image/jpeg" required>
+  <label class="custom-file-label" for="customFile">Upload Img</label>
+</div>
+<br>
+<label>Area of Work<span style="color:red;">*</span>:</label>
+<br>
+<select id="work" name="work" class="form-control w-50" required="">
+<option value="" selected="">Select Option</option>
+<option value="Work Near by you">Work Near by you</option>
+<option value="Work In your District">Work In your District</option>
+</select>
+<br>
+<label>Volunteer Type<span style="color:red;">*</span>:</label>
+<br>
+<select id="type" name="type" class="form-control w-50" required="">
+<option value="" selected="">Select Option</option>
+<option value="Individual">Individual</option>
+<option value="Organisation">Organisation</option>
+</select>
+<br>
+<label for="validationTextarea">Why You want to Join as Volunteer?</label><br>
+ <textarea placeholder="textarea" name="textarea" class="w-50"></textarea>
+<br>
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
